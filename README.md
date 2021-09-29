@@ -4,6 +4,6 @@ A simple personal info Nui for FiveM
 # Requirements
 - ESX 
 
-#Extras
+# Extras
 
 My discord: https://discord.gg/Fb2bugCk
