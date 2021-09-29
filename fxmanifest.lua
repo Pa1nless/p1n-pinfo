@@ -11,12 +11,12 @@ shared_script {
 
 client_script 'client/cl.lua'
 
-server_script 'client/sv.lua'
+server_script 'server/sv.lua'
 
 ui_page 'ui/index.html'
 
 files {
-    'ui/ui.html',
+    'ui/index.html',
     'ui/script.js',
     'ui/style.css',
     'ui/*.ttf'

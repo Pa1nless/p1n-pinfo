@@ -16,11 +16,10 @@ CreateThread(function()
     while true do
         Wait(200)
         if IsControlPressed(0, 19) then --left alt
-            ESX.TriggerServerCallback("p1n-info:getData", function(data)
-                SendNUIMessage({
-                    show = true,
-                    data = data
-                })
+            ESX.TriggerServerCallback('p1n-info:getData', function(data)
+                for _, v in pairs(data) do
+                    SendNUIMessage({show = true, data = v})
+                end
             end)
 
             while IsControlPressed(0, 19) do

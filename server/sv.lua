@@ -3,7 +3,7 @@ if Config.UseOldESX then
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 end
 
-ESX.RegisterServerCallback("p1n-info:getData", function(source, cb)
+ESX.RegisterServerCallback('p1n-info:getData', function(source, cb)
     local playerId <const> = source
     local xPlayer = ESX.GetPlayerFromId(playerId)
 
