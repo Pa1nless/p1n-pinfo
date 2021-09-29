@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "font";
+    src: url(https://cdn.discordapp.com/attachments/872680466916978752/892582411089625170/BoxedMedium.ttf);
+}
+
+#bxo {
+    transition: all 400ms;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    transition: all 300ms;
+}
+
+
+.box{
+    
+   
+    font-family: "font";
+    position: fixed;
+    top: 30vh;
+    right: -40%;
+    width: 9.6vw;
+    height: 16.2vh;
+    background-color: rgba(0, 0, 0, 0.76);
+    border-radius: 0.6vh;
+    color: white;
+    font-size: 1.25vh;
+    padding: 0.92vh;
+}
+
+.info{
+    font-family: "font";
+    margin: 0;
+    position: absolute;
+    left: 3.5vh;
+    line-height: 1.0;
+    top: 1.3vh;
+
+}
+
+.lineone{
+    top: 2.7vh;
+    position: absolute;
+    width: 17.4vh;
+}
+
+.linetwo{
+    top: 2.7vh;
+    position: absolute;
+    width: 17.4vh;
+}
+
+.name{
+    margin: 0;
+    position: absolute;
+    top: 4.5vh;
+}
+
+.job{
+    margin: 0;
+    position: absolute;
+    top: 6.5vh;
+}
+
+.cash{
+    margin: 0;
+    position: absolute;
+    top: 8.5vh;
+}
+
+.bank{
+    margin: 0;
+    position: absolute;
+    top: 10.5vh;
+}
