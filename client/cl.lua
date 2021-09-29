@@ -1,3 +1,8 @@
+if Config.UseOldESX then 
+ESX = nil
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+end
+
 CreateThread(function()
     while true do
         Wait(200)
