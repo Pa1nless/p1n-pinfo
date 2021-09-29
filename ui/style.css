@@ -1,15 +1,6 @@
 @font-face {
-    font-family: "font";
-    src: url(https://cdn.discordapp.com/attachments/872680466916978752/892582411089625170/BoxedMedium.ttf);
-}
-
-#bxo {
-    transition: all 400ms;
-}
-
-html, body {
-    margin: 0;
-    height: 100%;
+    font-family: "box";
+    src: url(./BoxedMedium.ttf);
 }
 
 body {
@@ -17,65 +8,58 @@ body {
     transition: all 300ms;
 }
 
+.wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-.box{
-    
-   
-    font-family: "font";
-    position: fixed;
-    top: 30vh;
-    right: -40%;
-    width: 9.6vw;
-    height: 16.2vh;
+.container {
+    position: relative;
+    margin-right: 1.0%;
+}
+
+.box {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25vh;
+
+    border-radius: 0.4vh;
     background-color: rgba(0, 0, 0, 0.76);
-    border-radius: 0.6vh;
+    padding: 0.2vh;
+}
+
+.box span {
+    font-size: 2.0vh;
+    font-family: "box";
     color: white;
-    font-size: 1.25vh;
-    padding: 0.92vh;
+    margin: 5.5%;
 }
 
-.info{
-    font-family: "font";
-    margin: 0;
-    position: absolute;
-    left: 3.5vh;
-    line-height: 1.0;
-    top: 1.3vh;
-
+.data-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    border-top: 0.2vh solid white;
+    padding: 0.2vh;
 }
 
-.lineone{
-    top: 2.7vh;
-    position: absolute;
-    width: 17.4vh;
-}
-
-.linetwo{
-    top: 2.7vh;
-    position: absolute;
-    width: 17.4vh;
-}
-
-.name{
-    margin: 0;
-    position: absolute;
-    top: 4.5vh;
-}
-
-.job{
-    margin: 0;
-    position: absolute;
-    top: 6.5vh;
-}
-
-.cash{
-    margin: 0;
-    position: absolute;
-    top: 8.5vh;
-}
-
-.bank{
-    margin: 0;
-    position: absolute;
-    top: 10.5vh;
+.data-container span {
+    font-size: 1.7vh;
+    font-family: "box";
+    color: white;
+    margin-top: 3.5%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    margin-bottom: 5%;
 }

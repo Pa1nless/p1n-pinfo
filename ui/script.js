@@ -1,28 +1,11 @@
-console.log("JS LOADED")
-$(function(){
-    window.addEventListener("message", function(event){
-        let all = document.querySelector(".box")
-
-        let ev = event.data
-        let show = true
-
-        if (ev.show ){
-            all.style = "right: 1%"
-
-            let name = ev.name;
-            $(".name").html("Name: " +name);
-
-            let job = ev.job;
-            $(".job").html("Job: "+job);
-
-            let cash = ev.cash;
-            $(".cash").html("Cash: " +cash);
-
-            let bank = ev.bank;
-            $(".bank").html("Bank: " +bank);
+window.addEventListener('load', () => {
+    const all = document.getElementById('box');
+    this.addEventListener('message', e => {
+        if (e.data.show) {
+            all.style.display = "flex";
+            console.log(e.data.data)
         } else {
-            all.style = "right: -40%"
+            all.style.display = "none";
         }
-        
     })
 })
