@@ -14,7 +14,7 @@ CreateThread(function()
             ESX.TriggerServerCallback('p1n-info:getData', function(data)
                 SendNUIMessage({show = true, data = data})
             end)
-
+        
             while IsControlPressed(0, 19) do
                 Wait(100)
             end
@@ -22,4 +22,3 @@ CreateThread(function()
         end
     end
 end)
-
