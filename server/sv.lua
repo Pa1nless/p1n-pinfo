@@ -1,6 +1,6 @@
 if Config.UseOldESX then
     ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 end
 
 ESX.RegisterServerCallback('p1n-info:getData', function(source, cb)
@@ -9,9 +9,10 @@ ESX.RegisterServerCallback('p1n-info:getData', function(source, cb)
 
     -- You can add whatever you want here
     local data = {
-        xPlayer.getName(),
+        'Name: '..xPlayer.getName(),
         '$ '..xPlayer.getAccount('money').money,
-        '$ '..xPlayer.getAccount('bank').money
+        '$ '..xPlayer.getAccount('bank').money,
+        'Job: '..xPlayer.getJob().label
     }
     cb(data)
 end)

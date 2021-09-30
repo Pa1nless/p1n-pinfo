@@ -6,6 +6,7 @@
 body {
     box-sizing: border-box;
     transition: all 300ms;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -29,6 +30,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 25vh;
 
     border-radius: 0.4vh;

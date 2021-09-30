@@ -10,19 +10,16 @@ window.addEventListener('load', () => {
     })
 })
 
-const appendData = data => {
+const appendData = (data) => {
     const cont = document.getElementById('data');
-    const allData = document.getElementsByClassName('data');
-    if (allData[0]) {
-        for (let i=0; i < allData.length; i++) {
-            allData[i].remove()
-        }
-    }
 
     data.forEach(dataItem => {
+        if (document.getElementById(dataItem)) {
+            document.getElementById(dataItem).remove()
+        }
         const item = document.createElement('span');
-        item.classList.add('data');
         item.textContent = dataItem;
+        item.id=dataItem
         cont.appendChild(item);
     });
 }
