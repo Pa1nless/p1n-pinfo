@@ -1,12 +1,7 @@
 if Config.UseOldESX then 
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+    ESX = nil
+    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 end
-
-RegisterNetEvent('esx:setJob')
-AddEventHandler('esx:setJob', function(job)
-	ESX.PlayerData.job = job
-end)
 
 CreateThread(function()
     while true do
@@ -16,7 +11,7 @@ CreateThread(function()
             SendNUIMessage({
                 show = true,
                 name = data.name,
-                job =   ESX.PlayerData.job.label,
+                job =  data.job,
                 cash = "$ "..data.cash,
                 bank = "$ "..data.bank,
             })
@@ -32,3 +27,5 @@ CreateThread(function()
     end
 end)
 
+    
+    
