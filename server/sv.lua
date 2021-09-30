@@ -9,9 +9,9 @@ ESX.RegisterServerCallback('p1n-info:getData', function(source, cb)
 
     -- You can add whatever you want here
     local data = {
-        name = xPlayer.getName(),
-        cash = '$ '..xPlayer.getAccount('money').money,
-        bank = '$ '..xPlayer.getAccount('bank').money
+        xPlayer.getName(),
+        '$ '..xPlayer.getAccount('money').money,
+        '$ '..xPlayer.getAccount('bank').money
     }
     cb(data)
 end)

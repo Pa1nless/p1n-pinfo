@@ -19,5 +19,5 @@ files {
     'ui/index.html',
     'ui/script.js',
     'ui/style.css',
-    'ui/*.ttf'
+    'ui/BoxedMedium.ttf'
 }

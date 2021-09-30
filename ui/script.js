@@ -10,17 +10,19 @@ window.addEventListener('load', () => {
     })
 })
 
-let count = 0
-
 const appendData = data => {
     const cont = document.getElementById('data');
-    const elem = document.createElement('span');
-    elem.classList.add('data');
-    elem.id = count
-    elem.textContent = data;
-    cont.appendChild(elem);
-    if (count > 2) {
-        document.getElementById(count - count + parseInt(elem.id) - 3).remove()
+    const allData = document.getElementsByClassName('data');
+    if (allData[0]) {
+        for (let i=0; i < allData.length; i++) {
+            allData[i].remove()
+        }
     }
-    count = count + 1
+
+    data.forEach(dataItem => {
+        const item = document.createElement('span');
+        item.classList.add('data');
+        item.textContent = dataItem;
+        cont.appendChild(item);
+    });
 }
