@@ -1,28 +1,25 @@
-console.log("JS LOADED")
-$(function(){
-    window.addEventListener("message", function(event){
-        let all = document.querySelector(".box")
-
-        let ev = event.data
-        let show = true
-
-        if (ev.show ){
-            all.style = "right: 1%"
-
-            let name = ev.name;
-            $(".name").html("Name: " +name);
-
-            let job = ev.job;
-            $(".job").html("Job: "+job);
-
-            let cash = ev.cash;
-            $(".cash").html("Cash: " +cash);
-
-            let bank = ev.bank;
-            $(".bank").html("Bank: " +bank);
+window.addEventListener('load', () => {
+    const all = document.getElementById('box');
+    this.addEventListener('message', e => {
+        if (e.data.show) {
+            appendData(e.data.data);
+            all.style.display = "flex";
         } else {
-            all.style = "right: -40%"
+            all.style.display = "none";
         }
-        
     })
 })
+
+const appendData = (data) => {
+    const cont = document.getElementById('data');
+
+    data.forEach(dataItem => {
+        if (document.getElementById(dataItem)) {
+            document.getElementById(dataItem).remove()
+        }
+        const item = document.createElement('span');
+        item.textContent = dataItem;
+        item.id=dataItem
+        cont.appendChild(item);
+    });
+}
