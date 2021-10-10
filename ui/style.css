@@ -33,7 +33,7 @@ body {
     flex-wrap: wrap;
     width: 25vh;
 
-    border-radius: 0.4vh;
+    border-radius: 1vh;
     background-color: rgba(0, 0, 0, 0.76);
     padding: 0.2vh;
 }
